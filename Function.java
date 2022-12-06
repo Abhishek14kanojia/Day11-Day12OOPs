@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Function {
+	long accountBalance = 0;
+
 	Scanner sc = new Scanner(System.in);
 	List<Portfolio>list = new ArrayList<Portfolio>();
 	void Stock() {
@@ -21,6 +23,22 @@ public class Function {
 		}
 	}
 	
+	void credit() {
+		int amount = 150000;
+		accountBalance = accountBalance + amount;
+		System.out.println(accountBalance);
+	}
+	void debit() {
+		long debitAmount = 120000;
+		if (debitAmount>accountBalance) {
+			System.out.println("debit amount is greater then accout balance");
+			
+		}else {
+			long remainingammount = accountBalance - debitAmount;
+			System.out.println(remainingammount);
+		}
+	}
+	
 	void result () {
 		for (Portfolio i : list) {
 			System.out.println(i);
@@ -33,6 +51,9 @@ public class Function {
 	obj1.Stock();
 	System.out.println("Result is : ");
 	obj1.result();
+	obj1.credit();
+	
+	obj1.debit();
 	}
 	
 	

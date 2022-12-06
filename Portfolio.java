@@ -27,7 +27,7 @@ public class Portfolio {
 		return totalValueOfShares;
 	}
 	public final void setTotalValueOfShares(double totalValueOfShares) {
-		this.totalValueOfShares = totalValueOfShares;
+		this.totalValueOfShares = totalValueOfShares; 
 	}
 	@Override
 	public String toString() {
